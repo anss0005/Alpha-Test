@@ -132,6 +132,11 @@ public class test extends AppCompatActivity {
         rootButton.setEnabled(false);
     }
 
+
+
+
+
+
     private void saveResultToDatabase(int isCorrect) {
         ContentValues values = new ContentValues();
         values.put(COLUMN_QUESTION, "Question " + (questionCount + 1));
@@ -143,7 +148,6 @@ public class test extends AppCompatActivity {
             Toast.makeText(this, "Failed to save result to database", Toast.LENGTH_SHORT).show();
         }
     }
-
     private void showQuizResult() {
         Cursor cursor = database.query(TABLE_NAME, null, null, null, null, null, COLUMN_ID + " DESC", "5");
 
